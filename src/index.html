@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .background {
+        background-image: url(./gallery/headerBG.webp);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
+    <!-- nav bar start  -->
+    <nav
+      class="flex justify-between items-center backdrop-blur sticky top-0 z-10"
+    >
+      <img src="./gallery/atomsLogo.png" alt="" class="w-[150px]" />
+      <ul class="hidden lg:flex">
+        <li class="mx-3 my-2 px-2 text-lg font-semibold">
+          <a href="#">Men</a>
+        </li>
+        <li class="mx-3 my-2 px-2 text-lg font-semibold">
+          <a href="#">Women</a>
+        </li>
+        <li class="mx-3 my-2 px-2 text-lg font-semibold">
+          <a href="#">Accessories</a>
+        </li>
+        <li class="mx-3 my-2 px-2 text-lg font-semibold">
+          <a href="#">About</a>
+        </li>
+        <li
+          class="mx-3 my-2 px-5 text-lg border border-slate-300 bg-blue-100 rounded-full font-bold text-blue-600"
+        >
+          <a href="">Shoe Finder Quiz</a>
+        </li>
+      </ul>
+      <ul class="flex">
+        <li class="mx-3 my-2 px-2 text-lg font-semibold">
+          <a href="#">support</a>
+        </li>
+        <li class="mx-3 my-2 px-2 text-lg font-semibold">
+          <a href="#"><i class="fa-solid fa-user"></i></a>
+        </li>
+        <li class="mx-3 my-2 px-2 text-lg font-semibold">
+          <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- nav bar ended  -->
+    <!-- header start  -->
+    <ul class="flex justify-center lg:hidden">
+      <li class="mx-1 md:mx-3 my-2 px-2 md:text-lg font-semibold">
+        <a href="#">Men</a>
+      </li>
+      <li class="mx-1 md:mx-3 my-2 px-2 md:text-lg font-semibold">
+        <a href="#">Women</a>
+      </li>
+      <li class="mx-1 md:mx-3 my-2 px-2 md:text-lg font-semibold">
+        <a href="#">Accessories</a>
+      </li>
+      <li class="mx-1 md:mx-3 my-2 px-2 md:text-lg font-semibold">
+        <a href="#">About</a>
+      </li>
+    </ul>
+    <ul>
+      <li
+        class="mx-auto lg:hidden lg:mx-3 my-2 px-5 md:text-lg border border-slate-300 bg-blue-100 rounded-full font-bold text-blue-600 text-center w-1/2"
+      >
+        <a href="#" class="text-center">Shoe Finder Quiz</a>
+      </li>
+    </ul>
+    <div
+      class="w-11/12 h-[700px] mx-auto mt-10 rounded-2xl background bg-center bg-no-repeat bg-cover"
+    >
+      <div class="flex flex-col justify-center">
+        <img
+          src="./gallery/headerShoe.webp"
+          alt=""
+          class="lg:w-1/5 m-auto block hover:w-3/12"
+        />
+        <p class="text-center my-5 text-lg md:text-2xl">INTRODUCING</p>
+        <h1 class="font-serif text-5xl md:text-8xl text-center">
+          Tropical Green
+        </h1>
+        <p class="text-center my-5 text-lg md:text-2xl">
+          Refreshing, vibrant and fun vibes
+        </p>
+        <button
+          class="text-xl md:text-3xl font-bold text-center m-auto px-4 py-2 bg-slate-800 text-white rounded-full mt-10 hover:rotate-12 transition"
+        >
+          Shop Now
+        </button>
+      </div>
+    </div>
+    <div
+      class="w-11/12 mx-auto h-96 bg-slate-200 my-20 rounded-3xl flex flex-col justify-center px-10 overflow-hidden"
+    >
+      <h1
+        class="font-serif text-xl md:text-2xl lg:text-4xl text-center transition ease-in -my-5 duration-300"
+        id="brandText1"
+      >
+        “The most thoughtfully designed sneakers ever.”
+      </h1>
+      <h1
+        class="font-serif text-xl md:text-2xl lg:text-4xl text-center transition ease-in -my-5 translate-x-full duration-300"
+        id="brandText2"
+      >
+        “Your secret-weapon sneakers may have just arrived.”
+      </h1>
+      <h1
+        class="font-serif text-xl md:text-2xl lg:text-4xl text-center transition ease-in -my-5 translate-x-full duration-300"
+        id="brandText3"
+      >
+        “I ordered ten pairs as Christmas presents. These were the best received
+        gifts I’ve ever given. My agent went on to buy an additional seven pairs
+        in every color.”
+      </h1>
+      <ul class="flex justify-center mt-10">
+        <li class="mx-3 md:text-2xl">
+          <button
+            id="b1"
+            class="text-slate-300 text-slate-800 hover:text-slate-500 transition brand"
+          >
+            Vogue
+          </button>
+        </li>
+        <li class="mx-3 md:text-2xl">
+          <button
+            id="b2"
+            class="text-slate-300 hover:text-slate-500 transition brand"
+          >
+            Esquire
+          </button>
+        </li>
+        <li class="mx-3 md:text-2xl">
+          <button
+            id="b3"
+            class="text-slate-300 hover:text-slate-500 transition brand"
+          >
+            Human of Newyork
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- header end  -->
+
+    <!-- shoe section start  -->
+    <div class="w-11/12 m-auto flex justify-between">
+      <a href="#" class="text-2xl mb-3">
+        <h1>Explore Model 000</h1>
+      </a>
+      <a href="#" class="text-xl mb-3 underline mr-5">Shop Now</a>
+    </div>
+    <div class="md:flex flex-wrap w-11/12 m-auto">
+      <div
+        class="flex-1 w-full flex-grow h-96 md:h-56 lg:h-96 bg-cover bg-center mb-5 mr-5 rounded-xl relative shoe1"
+        style="background-image: url(./gallery/shoe1.webp)"
+      >
+        <div class="absolute bottom-10 w-full px-5 flex justify-between">
+          <p>Model 001</p>
+          <p>$125</p>
+        </div>
+      </div>
+      <div
+        class="flex-1 w-full flex-grow h-96 md:h-56 lg:h-96 bg-cover bg-center mb-5 mr-5 rounded-xl relative"
+        style="background-image: url(./gallery/shoe2.webp)"
+      >
+        <div class="absolute bottom-10 w-full px-5 flex justify-between">
+          <p>Model 001</p>
+          <p>$125</p>
+        </div>
+      </div>
+      <div
+        class="flex-1 w-full flex-grow h-96 md:h-56 lg:h-96 bg-cover bg-center mb-5 mr-5 rounded-xl relative"
+        style="background-image: url(./gallery/shoe3.webp)"
+      >
+        <div class="absolute bottom-10 w-full px-5 flex justify-between">
+          <p>Model 001</p>
+          <p>$125</p>
+        </div>
+      </div>
+    </div>
+    <div class="md:flex flex-wrap w-11/12 m-auto">
+      <div
+        class="flex-1 w-full flex-grow h-96 md:h-56 lg:h-96 bg-cover bg-center mb-5 mr-5 rounded-xl relative shoe1"
+        style="background-image: url(./gallery/shoe4.webp)"
+      >
+        <div class="absolute bottom-10 w-full px-5 flex justify-between">
+          <p>Model 001</p>
+          <p>$125</p>
+        </div>
+      </div>
+      <div
+        class="flex-1 w-full flex-grow h-96 md:h-56 lg:h-96 bg-cover bg-center mb-5 mr-5 rounded-xl relative"
+        style="background-image: url(./gallery/shoe5.webp)"
+      >
+        <div class="absolute bottom-10 w-full px-5 flex justify-between">
+          <p>Model 001</p>
+          <p>$125</p>
+        </div>
+      </div>
+      <div
+        class="flex-1 w-full flex-grow h-96 md:h-56 lg:h-96 bg-cover bg-center mb-5 mr-5 rounded-xl relative"
+        style="background-image: url(./gallery/shoe6.webp)"
+      >
+        <div class="absolute bottom-10 w-full px-5 flex justify-between">
+          <p>Model 001</p>
+          <p>$125</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-11/12 flex justify-end m-auto">
+      <button
+        class="bg-green-500 px-3 py-2 rounded-full hover:bg-green-600 transition text-white mx-5"
+      >
+        Shop Now
+      </button>
+    </div>
+    <!-- shoe section end  -->
+
+    <!-- advertisement section start -->
+    <div class="lg:flex w-11/12 mx-auto my-20">
+      <div class="bg-slate-100 rounded-2xl" style="flex: 2">
+        <h1 class="font-serif text-4xl text-center py-5">The Hype is real</h1>
+        <div class="w-full md:flex">
+          <img
+            src="./gallery/shoepose1.webp"
+            alt=""
+            class="flex-1 md:w-1/2 object-contain"
+          />
+          <div class="flex-1 p-10">
+            <p class="text-center text-2xl my-10">Zachery C.</p>
+            <p class="font-serif text-center text-4xl">“Stylish simple most</p>
+            <p class="font-serif text-center text-4xl">
+              comfortable shoes. I’m
+            </p>
+            <p class="font-serif text-center text-4xl">buying a second pair.</p>
+            <p class="font-serif text-center text-4xl">Wear it daily.”</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-cover bg-bottom rounded-2xl lg:h-auto h-96 lg:w-1/2 relative"
+        style="flex: 1; background-image: url(./gallery/shoepose2.webp)"
+      >
+        <div
+          class="w-full mx-auto absolute bottom-20 flex justify-between px-2 md:px-10"
+        >
+          <p class="bg-black px-3 py-2 rounded-full text-white">
+            Model 000: Navy
+          </p>
+          <button
+            class="bg-green-500 px-3 py-2 rounded-full hover:bg-green-600 transition text-white mx-5"
+          >
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- advertisement section end  -->
+
+    <!-- black bg advertisement section start -->
+    <div class="bg-black w-full p-5 m-auto">
+      <p class="px-10 py-1 rounded-full bg-white w-fit m-auto">New</p>
+      <h1 class="text-center text-7xl font-serif text-white my-5">
+        Introducing Model 001
+      </h1>
+      <div class="p-10">
+        <p class="text-white my-5 text-2xl">Explore Model 101</p>
+        <div class="md:flex">
+          <div class="flex flex-1 flex-col">
+            <div class="md:mr-4 relative">
+              <img
+                src="./gallery/shoe1.webp"
+                alt=""
+                class="w-full h-full rounded-2xl"
+              />
+              <div
+                class="z-10 absolute flex justify-between bottom-10 lg:px-7 md:px-4 px-2 w-full"
+              >
+                <p>Model:001 Black</p>
+                <p>$125</p>
+              </div>
+            </div>
+            <div class="md:mr-4 mt-4 md:mb-0 relative">
+              <img
+                src="./gallery/shoe2.webp"
+                alt=""
+                class="w-full h-full rounded-2xl"
+              />
+              <div
+                class="z-10 absolute flex justify-between bottom-10 lg:px-7 md:px-4 px-2 w-full"
+              >
+                <p>Model:001 White</p>
+                <p>$125</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative md:mt-0 mt-4" style="flex: 2">
+            <img
+              src="./gallery/shoe3.webp"
+              alt=""
+              class="w-full rounded-2xl h-full"
+            />
+            <div
+              class="z-10 absolute flex justify-between bottom-10 px-10 w-full"
+            >
+              <p>Model:001 Random Shoe</p>
+              <button
+                class="bg-green-500 px-3 py-2 rounded-full hover:bg-green-600 transition text-white mx-5"
+              >
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="text-white my-5 text-2xl">Explore Model 101</p>
+        <div class="md:flex">
+          <div class="relative md:mt-0 mt-4" style="flex: 2">
+            <img
+              src="./gallery/accessories1.png"
+              alt=""
+              class="w-full rounded-2xl h-full"
+            />
+            <div
+              class="z-10 absolute flex justify-between bottom-10 px-10 w-full"
+            >
+              <p>Model:001 Random Shoe</p>
+              <button
+                class="bg-green-500 px-3 py-2 rounded-full hover:bg-green-600 transition text-white mx-5"
+              >
+                Shop Now
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col">
+            <div class="md:ml-4 relative">
+              <img
+                src="./gallery/shoe1.webp"
+                alt=""
+                class="w-full h-full rounded-2xl"
+              />
+              <div
+                class="z-10 absolute flex justify-between bottom-10 lg:px-7 md:px-4 px-2 w-full"
+              >
+                <p>Model:001 Black</p>
+                <p>$125</p>
+              </div>
+            </div>
+            <div class="md:ml-4 mt-4 md:mb-0 relative">
+              <img
+                src="./gallery/shoe2.webp"
+                alt=""
+                class="w-full h-full rounded-2xl"
+              />
+              <div
+                class="z-10 absolute flex justify-between bottom-10 lg:px-7 md:px-4 px-2 w-full"
+              >
+                <p>Model:001 White</p>
+                <p>$125</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- black bg advertisement section end -->
+    <!-- Our story -->
+    <div
+      class="md:flex my-20 w-11/12 mx-auto md:h-96 lg:h-auto overflow-hidden"
+    >
+      <div class="flex-1">
+        <img
+          src="./gallery/ourStoryPic.jpg"
+          alt=""
+          class="w-full md:full h-full"
+        />
+      </div>
+      <div class="flex-1 bg-black lg:p-0 py-10">
+        <p
+          class="px-3 py-1 bg-white w-fit m-auto rounded-full mt-12 lg:mt-52 font-semibold text-xl mb-10"
+        >
+          Our story
+        </p>
+        <h1 class="text-white font-bold text-7xl text-center">ATOMS</h1>
+      </div>
+      <div class="flex-1 bg-slate-50 lg:p-0 py-10">
+        <p
+          class="text-center text-4xl md:text-2xl lg:text-4xl font-serif mt-12 lg:mt-32"
+        >
+          Based in New York
+        </p>
+        <p class="text-center text-4xl md:text-2xl lg:text-4xl font-serif">
+          City, Atoms began
+        </p>
+        <p class="text-center text-4xl md:text-2xl lg:text-4xl font-serif">
+          with an idea: make a
+        </p>
+        <p class="text-center text-4xl md:text-2xl lg:text-4xl font-serif">
+          shoe you’d want to
+        </p>
+        <p
+          class="text-center text-4xl md:text-2xl lg:text-4xl font-serif mb-10"
+        >
+          wear everyday.
+        </p>
+        <div class="m-auto flex justify-center">
+          <a
+            href=""
+            class="text-xl px-4 py-2 rounded-full bg-black text-white text-center mb-12 lg:mb-0"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Our story -->
+    <!-- feature  -->
+    <div class="md:flex my-20 w-11/12 mx-auto md:h-96 lg:h-auto">
+      <div class="flex-1">
+        <img src="./gallery/FeaturePic.webp" alt="" class="w-full h-full" />
+      </div>
+      <div class="flex-1 bg-black lg:p-0 py-10">
+        <p
+          class="px-3 py-1 bg-white w-fit m-auto rounded-full mt-12 lg:mt-52 font-semibold text-xl mb-10"
+        >
+          Feature
+        </p>
+        <h1
+          class="text-white font-bold text-6xl md:text-4xl lg:text-7xl text-center"
+        >
+          Human of
+        </h1>
+        <h1
+          class="text-white font-bold text-6xl md:text-4xl lg:text-7xl text-center mb-12 lg:mb-0"
+        >
+          New York
+        </h1>
+      </div>
+      <div
+        class="flex-1 bg-slate-50 lg:p-0 py-10 lg:h-auto h-96 overflow-hidden"
+      >
+        <p
+          class="text-center text-4xl md:text-2xl lg:text-4xl font-serif mt-12 lg:mt-32"
+        >
+          Read our co-founder
+        </p>
+        <p class="text-center text-4xl md:text-2xl lg:text-4xl font-serif">
+          Sidra’s story about
+        </p>
+        <p class="text-center text-4xl md:text-2xl lg:text-4xl font-serif">
+          struggle, chasing
+        </p>
+        <p class="text-center text-4xl md:text-2xl lg:text-4xl font-serif">
+          dreams, and making
+        </p>
+        <p
+          class="text-center text-4xl md:text-2xl lg:text-4xl font-serif mb-10"
+        >
+          shoes.
+        </p>
+        <div class="m-auto flex justify-center">
+          <a
+            href=""
+            class="text-xl px-4 py-2 rounded-full bg-black text-white text-center"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- feature  -->
+    <footer class="bg-slate-100 p-10 block mt-20">
+      <div class="mx-auto w-full">
+        <div class="md:flex">
+          <div class="flex flex-1">
+            <div class="flex-1 text-center">
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+                Company
+              </h2>
+              <ul class="text-gray-500 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">About</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Careers</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Brand Center</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Blog</a>
+                </li>
+              </ul>
+              <div>
+                <i class="fa-brands fa-facebook text-xl ml-2"></i>
+                <i class="fa-brands fa-facebook-messenger text-xl ml-2"></i>
+                <i class="fa-brands fa-twitter text-xl ml-2"></i>
+                <i class="fa-brands fa-discord text-xl ml-2"></i>
+                <i class="fa-brands fa-twitch text-xl ml-2"></i>
+              </div>
+            </div>
+            <div class="flex-1 text-center">
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+                Help center
+              </h2>
+              <ul class="text-gray-500 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Discord Server</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Twitter</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Facebook</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-1 mt-10 lg:mt-0">
+            <div class="flex-1 text-center">
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+                Legal
+              </h2>
+              <ul class="text-gray-500 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Licensing</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+              </ul>
+            </div>
+            <div class="flex-1 text-center">
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+                Download
+              </h2>
+              <ul class="text-gray-500 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">iOS</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Android</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Windows</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">MacOS</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let brand = document.querySelectorAll(".brand");
+      brand.forEach((li) => {
+        let b1 = document.querySelector("#b1");
+        let b2 = document.querySelector("#b2");
+        let b3 = document.querySelector("#b3");
+        let BT = document.querySelector("#brandText");
+        var bText1 = document.getElementById("brandText1");
+        var bText2 = document.getElementById("brandText2");
+        var bText3 = document.getElementById("brandText3");
+        b1.onclick = (_) => {
+          b1.classList.add("text-slate-800");
+          b2.classList.remove("text-slate-800");
+          b3.classList.remove("text-slate-800");
+          bText1.classList.remove("translate-x-full");
+          bText2.classList.add("translate-x-full");
+          bText3.classList.add("translate-x-full");
+        };
+        b2.onclick = (_) => {
+          b2.classList.add("text-slate-800");
+          b1.classList.remove("text-slate-800");
+          b3.classList.remove("text-slate-800");
+          bText2.classList.remove("translate-x-full");
+          bText1.classList.add("translate-x-full");
+          bText3.classList.add("translate-x-full");
+        };
+        b3.onclick = (_) => {
+          b3.classList.add("text-slate-800");
+          b2.classList.remove("text-slate-800");
+          b1.classList.remove("text-slate-800");
+          bText3.classList.remove("translate-x-full");
+          bText2.classList.add("translate-x-full");
+          bText1.classList.add("translate-x-full");
+        };
+      });
+    </script>
+  </body>
+</html>
